@@ -1,0 +1,109 @@
+$lightBlue: rgb(155, 240, 255);
+$darkRed: darkred;
+$pColor: white;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Kurale', serif;
+    background: $darkRed;
+    padding-bottom: 15px;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 17% 1fr 17%;
+    background-image: url(./img/curtain.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body > * {
+    grid-column: 2;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.movie-item {
+    display: block;
+    height: 400px;
+    width: 270px;
+}
+
+nav > ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    line-height: 3em;
+    font-weight: 600;
+    color: $pColor; 
+}
+
+a {
+    background: white;
+}
+
+img {
+    opacity: 1;
+    transition: all 250ms ease-in-out;
+}
+
+img:hover {
+    opacity: 0.8;
+    transition: all 250ms ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    color: $lightBlue;
+    text-transform: uppercase;
+    font-size: 3em;
+    line-height: 2.5em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background: lighten($darkRed, 3%);
+}
+
+input[type=radio].with-font {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+    
+input[type=radio].with-font ~ label:before {
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f1db";
+    letter-spacing: 10px;
+    font-size: 1.2em;
+    color: $pColor;
+    width: 1.4em;
+}
+
+input[type=radio].with-font:checked ~ label:before {
+    content: "\f00c";
+    font-size: 1.2em;
+    color: $pColor;
+    letter-spacing: 5px;
+}
+
+input[type=radio].with-font:focus ~ label:before
+{                
+    color: $lightBlue;
+}
