@@ -14,7 +14,7 @@ body {
   display: grid;
   -ms-grid-columns: 17% 1fr 17%;
       grid-template-columns: 17% 1fr 17%;
-  background-image: url(./img/curtain.jpg);
+  background-image: url(../img/curtain.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
